@@ -24,7 +24,7 @@
 
     ```shell
     cd my-gatsby-site/
-    npm run develop
+    yarn run dev
     ```
 
 3.  **Open the code and start customizing!**
