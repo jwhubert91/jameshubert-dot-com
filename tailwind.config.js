@@ -7,22 +7,24 @@ module.exports = {
   theme: {
     extend: {},
   },
-  // daisyui: {
-  //   themes: [
-  //     {
-  //       mayanRevival: {
-  //         primary: "#ffff00",
-  //         secondary: "#ff0000",
-  //         accent: "#ff00ff",
-  //         neutral: "#ff00ff",
-  //         "base-100": "#ff00ff",
-  //         info: "#00ffff",
-  //         success: "#00ff00",
-  //         warning: "#00ff00",
-  //         error: "#ff0000",
-  //       },
-  //     },
-  //   ],
-  // },
-  plugins: [],
+  daisyui: {
+    themes: [
+      "mayanRevival",
+      {
+        mayanRevival: {
+          primary: "#00A388", // Jade Green (Primary)
+          secondary: "#4CA9FF", // Turquoise Blue (Secondary)
+          accent: "#E27D5E", // Terracotta
+          info: "#CC772C", // Ochre Yellow
+          warning: "#DC143C", // Crimson Red
+          "base-100": "#000000", // Black (Background)
+          "base-content": "#FFFFFF", // White (Text)
+          gray: "#DDD",
+          "light-gray": "#F4F4F4",
+          charcoal: "#333333",
+        },
+      },
+    ],
+  },
+  plugins: [require("daisyui")],
 }
