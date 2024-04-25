@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main className="dark flex flex-col w-full min-h-screen m-0 p-0">
+    <main className="flex flex-col w-full min-h-screen m-0 p-0">
       <Navbar />
     </main>
   )
