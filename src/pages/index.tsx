@@ -7,7 +7,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0">
       <Navbar className="hidden md:flex" />
-      <div className="container min-h-screen md:min-h-[90vh] xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2">
+      <div className="container min-h-screen md:min-h-[90vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-center">
           <h2 className="text-5xl md:text-6xl md:font-semibold mb-4">
             Web Development
@@ -17,9 +17,9 @@ const IndexPage: React.FC<PageProps> = () => {
             React, NextJS, and Gatsby development on demand
           </h3>
           <h4 className="text-medium">
-            On-call web development and support from an experienced, US based
-            frontend engineer. If you have an upcoming project I'd like to hear
-            from you.
+            On-call web development and technical support from an experienced,
+            US based frontend engineer. If you have an upcoming project I'd like
+            to hear from you.
           </h4>
         </div>
         <div className="flex items-center justify-center">
