@@ -3,6 +3,9 @@ import type { HeadFC, PageProps, Link } from "gatsby"
 import Navbar from "../components/Navbar"
 import RotatingCircle from "../components/RotatingCircle"
 
+// next up: contact font - https://fonts.google.com/specimen/Alike+Angular?query=Alike&sort=popularity
+// then: contact email - https://nodemailer.com/about/
+
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0">
