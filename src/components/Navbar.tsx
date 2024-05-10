@@ -19,7 +19,7 @@ function Navbar({ className = "" }) {
           </svg>
         </div>
         <h1 className="flex flex-col items-end">
-          <span className="text-2xl font-semibold">James Hubert</span>
+          <span className="text-xl font-semibold">James Hubert</span>
           <span className="text-xxs">Frontend Web Developer</span>
         </h1>
       </div>
@@ -32,7 +32,7 @@ function Navbar({ className = "" }) {
         </a> */}
         <a
           href="#contact"
-          className="btn btn-animated transition-all duration-300 hover:scale-110"
+          className="btn btn-sm btn-animated transition-all duration-300 hover:scale-110"
         >
           Contact
           <FaArrowRight />

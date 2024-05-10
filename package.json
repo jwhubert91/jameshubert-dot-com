@@ -19,6 +19,7 @@
     "@mdx-js/react": "^3.0.1",
     "autoprefixer": "^10.4.19",
     "daisyui": "^4.10.1",
+    "emailjs": "^4.0.3",
     "gatsby": "^5.13.3",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^5.13.1",

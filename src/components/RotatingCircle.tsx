@@ -28,8 +28,8 @@ const RotatingCircle = () => {
         key={i}
         className="circle-item"
         style={{
-          left: `${x + 100}px`, // Adjust left position
-          top: `${y + 100}px`, // Adjust top position
+          left: `${x + 80}px`, // Adjust left position
+          top: `${y + 80}px`, // Adjust top position
         }}
       >
         {divIcons[i]}
