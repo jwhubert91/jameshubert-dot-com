@@ -1,9 +1,7 @@
 import * as React from "react"
-import type { HeadFC, PageProps, Link } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
 import Navbar from "../components/Navbar"
 import RotatingCircle from "../components/RotatingCircle"
-import TextInput from "../components/TextInput"
-import TextArea from "../components/TextArea"
 import StickyTwitterLink from "../components/StickyTwitterLink"
 import ContactForm from "../components/ContactForm"
 
@@ -23,10 +21,12 @@ const IndexPage: React.FC<PageProps> = () => {
             <br /> as-a-service
           </h2>
           <h3 className="text-xl md:text-2xl mb-6 text-gray-400">
-            React, NextJS, and Gatsby development on demand
+            React, NextJS, Gatsby, Flutter, Webflow, and Shopify development on
+            demand
           </h3>
-          <h4 className="text-sm md:text-base">
-            On-call <span className="text-primary">web development</span> and{" "}
+          <h4 className="">
+            <span className="text-primary">On-call development</span> for{" "}
+            <span className="text-accent">web & mobile,</span> and{" "}
             <span className="text-secondary">technical support</span> from an
             experienced, US based frontend engineer. If you have an upcoming
             project I'd like to hear from you.
@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* <div>services</div>
       <div>work</div> */}
       {/* contact */}
-      <div className="bg-gray-300 min-h-[400px] flex-1">
+      <div className="bg-gray-200 min-h-[400px] flex-1" id="contact">
         <ContactForm />
       </div>
       {/* texture footer */}

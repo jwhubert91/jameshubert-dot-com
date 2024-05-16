@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme")
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,jsx,ts,tsx}",
@@ -10,11 +12,14 @@ module.exports = {
         xxs: "0.6em",
         base: ["20px", "32px"],
       },
+      fontFamily: {
+        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+      },
     },
   },
   daisyui: {
     themes: [
-      "mayanRevival",
+      "remix",
       {
         mayanRevival: {
           primary: "#00A388", // Jade Green (Primary)
@@ -27,6 +32,21 @@ module.exports = {
           gray: "#DDD",
           "light-gray": "#F4F4F4",
           charcoal: "#333333",
+        },
+      },
+      {
+        remix: {
+          primary: "#3992FF",
+          primaryAccent: "#1C6DF4",
+          secondary: "#6AD868",
+          accent: "#D83BD2",
+          info: "#FECC1A",
+          warning: "#FECC1A",
+          "base-100": "#121212",
+          "base-content": "#C8C8C8",
+          gray: "#DDD",
+          "light-gray": "#F4F4F4",
+          charcoal: "#333",
         },
       },
     ],
