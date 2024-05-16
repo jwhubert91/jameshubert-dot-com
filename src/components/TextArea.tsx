@@ -3,7 +3,7 @@ import React from "react"
 interface TextAreaProps {
   inputName: string
   placeholderText: string
-  inputBorderClassName: string
+  inputBorderClassName?: string
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -18,14 +18,14 @@ const TextArea = ({
   return (
     <div className="relative">
       <textarea
-        className={`w-full py-2 px-3 bg-transparent border-2 focus:outline-none transition-colors duration-300 border-black ${inputBorderClassName}`}
+        className={`w-full py-2 px-3 bg-transparent border-2 border-dashed focus:outline-none transition-colors duration-300 border-white focus:border-black placeholder-gray-300 ${inputBorderClassName}`}
         placeholder={placeholderText}
         rows={4}
       />
       <style>
         {`
           textarea:focus {
-            caret-color: green;
+            caret-color: white;
             animation: blink 1s infinite;
           }
 

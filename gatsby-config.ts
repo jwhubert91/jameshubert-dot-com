@@ -21,6 +21,7 @@ const config: GatsbyConfig = {
     options: {
       fonts: [
         `Inter`,
+        'Homemade Apple',
       ],
       display: 'swap'
     }

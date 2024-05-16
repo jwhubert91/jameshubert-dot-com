@@ -20,14 +20,14 @@ const IndexPage: React.FC<PageProps> = () => {
             Web Development
             <br /> as-a-service
           </h2>
-          <h3 className="text-xl md:text-2xl mb-6 text-gray-400">
+          <h3 className="text-xl mb-6 text-gray-400">
             React, NextJS, Gatsby, Flutter, Webflow, and Shopify development on
             demand
           </h3>
-          <h4 className="">
+          <h4>
             <span className="text-primary">On-call development</span> for{" "}
             <span className="text-accent">web & mobile,</span> and{" "}
-            <span className="text-secondary">technical support</span> from an
+            <span className="text-warning">technical support</span> from an
             experienced, US based frontend engineer. If you have an upcoming
             project I'd like to hear from you.
           </h4>
@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* <div>services</div>
       <div>work</div> */}
       {/* contact */}
-      <div className="bg-gray-200 min-h-[400px] flex-1" id="contact">
+      <div className="bg-primary min-h-[400px] flex-1" id="contact">
         <ContactForm />
       </div>
       {/* texture footer */}

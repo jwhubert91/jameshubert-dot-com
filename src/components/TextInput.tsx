@@ -4,7 +4,7 @@ interface TextInputProps {
   inputType: string
   inputName: string
   placeholderText: string
-  inputBorderClassName: string
+  inputBorderClassName?: string
   value: string
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
@@ -21,14 +21,14 @@ const TextInput = ({
     <div className="relative">
       <input
         type={inputType}
-        className={`w-full py-2 px-3 bg-transparent border-b-2 focus:outline-none transition-colors duration-300 border-black ${inputBorderClassName}`}
+        className={`w-full py-2 px-3 bg-transparent border-b-2 border-dashed border-white focus:outline-none focus:border-black transition-colors duration-300 placeholder-gray-300 ${inputBorderClassName}`}
         placeholder={placeholderText}
         onChange={onChange}
       />
       <style>
         {`
           input:focus {
-            caret-color: green;
+            caret-color: white;
             animation: blink 1s infinite;
           }
 
