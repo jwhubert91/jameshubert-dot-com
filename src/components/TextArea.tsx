@@ -18,7 +18,7 @@ const TextArea = ({
   return (
     <div className="relative">
       <textarea
-        className={`w-full py-2 px-3 bg-transparent border-2 border-dashed focus:outline-none transition-colors duration-300 border-white focus:border-black placeholder-gray-300 ${inputBorderClassName}`}
+        className={`w-full py-2 px-3 bg-transparent border-2 border-dashed focus:outline-none transition-colors duration-300 border-white placeholder-gray-300 ${inputBorderClassName}`}
         placeholder={placeholderText}
         rows={4}
       />

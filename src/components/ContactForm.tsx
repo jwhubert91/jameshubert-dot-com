@@ -20,7 +20,7 @@ const ContactForm = ({ className = "" }) => {
 
   return (
     <div className={`container mb-5 ${className}`}>
-      <div className="flex flex-col gap-y-3 max-w-[50%] mx-auto">
+      <div className="flex flex-col gap-y-3 md:max-w-[50%] mx-auto">
         <h3 className="text-2xl mb-10 font-homemade-apple text-white">
           Send me an email...
         </h3>
