@@ -32,7 +32,7 @@ function Navbar({ className = "" }) {
         </a> */}
         <a
           href="tel:646-653-9881"
-          className="hover:text-gray-400 flex items-center gap-x-2"
+          className="hover:text-gray-400 flex items-center gap-x-2 text-sm"
         >
           <FaPhone />
           1-646-653-9881

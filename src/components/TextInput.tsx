@@ -21,7 +21,7 @@ const TextInput = ({
     <div className="relative">
       <input
         type={inputType}
-        className={`w-full py-2 px-3 bg-transparent border-b-2 border-dashed border-white focus:outline-none focus:border-black transition-colors duration-300 placeholder-gray-300 ${inputBorderClassName}`}
+        className={`w-full py-2 px-3 bg-transparent border-b-2 border-dashed border-white focus:outline-none focus:border-solid transition-colors duration-300 placeholder-gray-300 ${inputBorderClassName}`}
         placeholder={placeholderText}
         onChange={onChange}
       />
