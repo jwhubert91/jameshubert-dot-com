@@ -10,6 +10,8 @@ import TextArea from "./TextArea"
 const ContactForm = ({ className = "" }) => {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
+  const [company, setCompany] = useState("")
+  const [phone, setPhone] = useState("")
   const [message, setMessage] = useState("")
 
   const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -39,11 +41,18 @@ const ContactForm = ({ className = "" }) => {
           onChange={(e) => setName(e.target.value)}
         />
         <TextInput
+          inputType="text"
+          inputName="company"
+          placeholderText="Company"
+          value={name}
+          onChange={(e) => setCompany(e.target.value)}
+        />
+        <TextInput
           inputType="phone"
           inputName="phone"
           placeholderText="Phone number"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
         />
         <TextArea
           placeholderText="Please provide a few details about your project"
