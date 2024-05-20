@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* navbar */}
       <Navbar className="hidden sm:flex" />
       {/* hero */}
-      <div className="container min-h-screen md:min-h-[90vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2">
+      <div className="container min-h-[85vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col justify-center mb-5">
           <h2 className="text-3xl sm:text-5xl md:font-semibold mb-4">
             Web Development

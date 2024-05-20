@@ -7,7 +7,7 @@ import { TiShoppingCart } from "react-icons/ti"
 
 const Services = () => {
   return (
-    <div className="container mb-12">
+    <div className="container" id="#services">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-x-12">
         {services.map((service, idx) => (
           <ServiceCard
@@ -38,7 +38,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <a
-      className="card bg-white text-black shadow-xl border border-accent flex flex-col text-center justify-between gap-y-4 transition-all duration-300 hover:scale-105 hover:cursor-pointer max-w-[90%]"
+      className="card bg-white text-black shadow-xl border border-accent flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer"
       href="#contact"
     >
       <div className="flex flex-col items-center justify-start gap-y-3">
@@ -49,7 +49,9 @@ function ServiceCard({
       </div>
       <div className="px-4 pb-4 items-center text-center gap-y-4 flex flex-col flex-1 justify-end">
         <p className="text-xs">{serviceDescription}</p>
-        <div className="btn btn-block btn-secondary">Contact</div>
+        <div className="btn btn-block btn-neutral text-white hover:bg-gray-900">
+          Contact
+        </div>
       </div>
     </a>
   )
