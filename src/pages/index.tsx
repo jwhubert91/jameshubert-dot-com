@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar"
 import RotatingCircle from "../components/RotatingCircle"
 import StickyTwitterLink from "../components/StickyTwitterLink"
 import ContactForm from "../components/ContactForm"
+import Services from "../components/Services"
 
 // next up: contact font - https://fonts.google.com/specimen/Alike+Angular?query=Alike&sort=popularity
 // then: contact email - https://nodemailer.com/about/
@@ -36,9 +37,12 @@ const IndexPage: React.FC<PageProps> = () => {
           <RotatingCircle />
         </div>
       </div>
+      {/* services */}
+      <Services />
+      {/* technologies used */}
       {/* testimonials */}
-      {/* <div>services</div>
-      <div>work</div> */}
+      {/* about */}
+      {/* portfolio */}
       {/* contact */}
       <div className="bg-primary min-h-[400px] flex-1" id="contact">
         <ContactForm />
