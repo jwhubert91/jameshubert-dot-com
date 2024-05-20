@@ -37,10 +37,10 @@ const IndexPage: React.FC<PageProps> = () => {
           <RotatingCircle />
         </div>
       </div>
+      {/* testimonials */}
       {/* services */}
       <Services />
       {/* technologies used */}
-      {/* testimonials */}
       {/* about */}
       {/* portfolio */}
       {/* contact */}

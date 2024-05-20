@@ -38,18 +38,18 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <a
-      className="card bg-white text-black shadow-xl border border-accent flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer"
+      className="card bg-white text-black shadow-xl border-2 border-accent flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer transition-all duration-300 hover:scale-105"
       href="#contact"
     >
-      <div className="flex flex-col items-center justify-start gap-y-3">
+      <div className="flex flex-col items-center justify-start gap-y-5">
         <figure className="px-10 pt-10 text-4xl">{iconElement}</figure>
-        <h2 className="card-title text-lg lg:text-xl max-w-[90%]">
+        <h2 className="card-title text-xl lg:text-2xl max-w-[90%]">
           {serviceName}
         </h2>
       </div>
       <div className="px-4 pb-4 items-center text-center gap-y-4 flex flex-col flex-1 justify-end">
         <p className="text-xs">{serviceDescription}</p>
-        <div className="btn btn-block btn-neutral text-white hover:bg-gray-900">
+        <div className="btn btn-block btn-neutral text-white hover:bg-gray-700">
           Contact
         </div>
       </div>
@@ -69,12 +69,12 @@ const services: ServiceCardProps[] = [
     iconElement: <FaMobileAlt />,
     serviceName: "Mobile Apps",
     serviceDescription:
-      "Mobile applications builds and maintenance in Flutter, Bubble, and React Native.",
+      "Mobile application builds and maintenance in Flutter, Bubble, and React Native.",
   },
   {
     iconElement: <TiShoppingCart />,
     serviceName: "Small Business Websites",
     serviceDescription:
-      "Stores, restaurants, services businesses and other organizations each require specific tools.",
+      "Stores, restaurants, services businesses and other organizations each has its own set of tools to best serve their customers.",
   },
 ]
