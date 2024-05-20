@@ -32,7 +32,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400% 400%;
-  animation: animate-text 15s ease infinite;
+  animation: animate-text 30s ease infinite;
 }
 
 @keyframes animate-text {
@@ -67,7 +67,7 @@
     #ff5722
   );
   background-size: 400% 400%;
-  animation: animate-background 15s ease infinite;
+  animation: animate-background 30s ease infinite;
 }
 
 @keyframes animate-background {
