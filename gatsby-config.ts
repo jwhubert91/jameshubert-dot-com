@@ -33,7 +33,16 @@ const config: GatsbyConfig = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'images',
+      path: './src/assets/images/',
+    },
+    __key: 'images',
+  },"gatsby-plugin-image",
+  "gatsby-plugin-sharp",
+  "gatsby-transformer-sharp"]
 };
 
 export default config;

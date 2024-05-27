@@ -1,13 +1,12 @@
 import React, { ReactElement } from "react"
 
 // components
-import { FaMobileAlt } from "react-icons/fa"
-import { FaCode } from "react-icons/fa6"
-import { TiShoppingCart } from "react-icons/ti"
+import { FaMobileAlt, FaStore } from "react-icons/fa"
+import { RiComputerLine } from "react-icons/ri"
 
-const Services = () => {
+const Services = ({ className = "" }) => {
   return (
-    <div className="container" id="#services">
+    <div className={`container ${className}`} id="#services">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 lg:gap-x-12">
         {services.map((service, idx) => (
           <ServiceCard
@@ -18,6 +17,7 @@ const Services = () => {
           />
         ))}
       </div>
+      <div className="w-full py-5"></div>
     </div>
   )
 }
@@ -38,7 +38,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <a
-      className="card bg-white text-black shadow-xl border-2 border-accent flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer transition-all duration-300 hover:scale-105"
+      className="card bg-white text-black shadow-xl flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer transition-all duration-300 hover:scale-105"
       href="#contact"
     >
       <div className="flex flex-col items-center justify-start gap-y-5">
@@ -60,8 +60,8 @@ function ServiceCard({
 // service card data
 const services: ServiceCardProps[] = [
   {
-    iconElement: <FaCode />,
-    serviceName: "Development & Maintenance",
+    iconElement: <RiComputerLine />,
+    serviceName: "Web Development",
     serviceDescription:
       "New website builds and ongoing maintenance for custom React, Gatsby, NextJS, Remix and full-stack applications.",
   },
@@ -69,10 +69,10 @@ const services: ServiceCardProps[] = [
     iconElement: <FaMobileAlt />,
     serviceName: "Mobile Apps",
     serviceDescription:
-      "Mobile application builds and maintenance in Flutter, Bubble, and React Native.",
+      "Mobile application builds and maintenance in Flutter, Thunkable, and React Native.",
   },
   {
-    iconElement: <TiShoppingCart />,
+    iconElement: <FaStore />,
     serviceName: "Small Business Websites",
     serviceDescription:
       "Stores, restaurants, services businesses and other organizations each has its own set of tools to best serve their customers.",

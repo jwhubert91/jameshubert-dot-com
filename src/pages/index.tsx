@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Navbar from "../components/Navbar"
-import RotatingCircle from "../components/RotatingCircle"
+// import RotatingCircle from "../components/RotatingCircle"
 import StickyTwitterLink from "../components/StickyTwitterLink"
 import ContactForm from "../components/ContactForm"
 import Services from "../components/Services"
@@ -15,17 +15,12 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* navbar */}
       <Navbar className="hidden sm:flex" />
       {/* hero */}
-      <div className="container min-h-[85vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col justify-center mb-5">
-          <h2 className="text-3xl sm:text-5xl md:font-semibold mb-4">
-            Web Development
-            <br /> as-a-service
-          </h2>
-          <h3 className="text-xl mb-6 text-gray-400">
-            React, NextJS, Gatsby, Flutter, Webflow, and Shopify development on
-            demand
-          </h3>
-          <h4>
+      <div className="container min-h-[80vh] 2xl:min-h-[60vh] grid grid-cols-1 lg:grid-cols-2 gap-x-11">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-3xl sm:text-6xl md:font-semibold mb-8">
+            Custom Web Development for React Apps
+          </h1>
+          <h4 className="text-gray-400">
             <span className="text-primary">On-call development</span> for{" "}
             <span className="text-accent">web & mobile,</span> and{" "}
             <span className="text-warning">technical support</span> from an
@@ -33,13 +28,15 @@ const IndexPage: React.FC<PageProps> = () => {
             project I'd like to hear from you.
           </h4>
         </div>
-        <div className="flex items-center justify-center">
-          <RotatingCircle />
+        <div className="flex items-center justify-end">
+          <div className="w-full aspect-square rounded-full">
+            <img src="../assets/images/headshot_plant.jpeg" />
+          </div>
         </div>
       </div>
       {/* testimonials */}
       {/* services */}
-      <Services />
+      <Services className="" />
       {/* technologies used */}
       {/* about */}
       {/* portfolio */}
