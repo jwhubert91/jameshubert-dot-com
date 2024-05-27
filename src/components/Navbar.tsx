@@ -3,7 +3,9 @@ import { FaArrowRight, FaPhone } from "react-icons/fa"
 
 function Navbar({ className = "" }) {
   return (
-    <nav className={`flex justify-between py-3 px-6 items-center ${className}`}>
+    <nav
+      className={`flex justify-between py-3 px-2 md:px-6 items-center ${className}`}
+    >
       <div className="flex gap-x-2 animated-text">
         <div>
           <svg
@@ -23,13 +25,7 @@ function Navbar({ className = "" }) {
           <span className="text-xxs">Frontend Web Developer</span>
         </h1>
       </div>
-      <div className="flex gap-x-8 items-center">
-        {/* <a href="#services" className="hover:text-gray-400">
-          Services
-        </a>
-        <a href="#work" className="hover:text-gray-400">
-          Work
-        </a> */}
+      <div className="gap-x-8 items-center hidden sm:flex">
         <a
           href="tel:646-653-9881"
           className="hover:text-gray-400 flex items-center gap-x-2 text-xs lg:text-sm"
