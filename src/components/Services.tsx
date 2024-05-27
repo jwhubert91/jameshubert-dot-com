@@ -38,7 +38,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <a
-      className="card bg-white text-black shadow-xl flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer transition-all duration-300 hover:scale-105"
+      className="card bg-white text-black shadow-xl flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer"
       href="#contact"
     >
       <div className="flex flex-col items-center justify-start gap-y-5">
