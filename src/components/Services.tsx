@@ -38,7 +38,7 @@ function ServiceCard({
 }: ServiceCardProps) {
   return (
     <a
-      className="card bg-white text-black shadow-xl flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer"
+      className="card bg-white text-black shadow-xl flex flex-col text-center justify-between gap-y-4 hover:cursor-pointer group"
       href="#contact"
     >
       <div className="flex flex-col items-center justify-start gap-y-5">
@@ -49,7 +49,7 @@ function ServiceCard({
       </div>
       <div className="px-4 pb-4 items-center text-center gap-y-4 flex flex-col flex-1 justify-end">
         <p className="text-xs">{serviceDescription}</p>
-        <div className="btn btn-block btn-neutral text-white hover:bg-gray-700">
+        <div className="btn btn-block btn-neutral text-white group-hover:bg-gray-700">
           Contact
         </div>
       </div>
@@ -61,7 +61,7 @@ function ServiceCard({
 const services: ServiceCardProps[] = [
   {
     iconElement: <RiComputerLine />,
-    serviceName: "Web Development",
+    serviceName: "React Development",
     serviceDescription:
       "New website builds and ongoing maintenance for custom React, Gatsby, NextJS, Remix and full-stack applications.",
   },
