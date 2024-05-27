@@ -70,6 +70,10 @@
   animation: animate-background 30s ease infinite;
 }
 
+.btn-animated:hover {
+  background: black !important;
+}
+
 @keyframes animate-background {
   0% {
     background-position: 0% 50%;

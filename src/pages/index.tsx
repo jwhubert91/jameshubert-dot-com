@@ -11,6 +11,7 @@ import Services from "../components/Services"
 
 // assets
 import headshotImage from "../assets/images/headshot_plant.jpeg"
+import { AnimatedLink } from "../components/Link"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -18,18 +19,19 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* navbar */}
       <Navbar className="flex" />
       {/* hero */}
-      <div className="container min-h-[80vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2 gap-11">
+      <div className="container min-h-[85vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2 gap-11">
         <div className="flex flex-col max-w-[450px] mx-auto sm:max-w-none justify-center">
           <h1 className="text-3xl md:text-5xl md:font-semibold mb-8">
             Web & Mobile Developer for React Applications
           </h1>
-          <h4 className="text-gray-400">
+          <h4 className="text-gray-400 mb-5">
             <span className="text-primary">On-call development</span> for{" "}
             <span className="text-accent">web & mobile,</span> and{" "}
             <span className="text-warning">technical support</span> from an
             experienced, US based frontend engineer. If you have an upcoming
             project I'd like to hear from you.
           </h4>
+          <AnimatedLink label="Start your project" className="text-lg" />
         </div>
         <div className="flex mt-5 md:mt-0 items-center justify-center order-first md:order-last">
           <div className="w-full max-w-[250px] md:max-w-[350px] aspect-square relative">

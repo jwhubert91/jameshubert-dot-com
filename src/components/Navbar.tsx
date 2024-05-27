@@ -1,5 +1,6 @@
 import React from "react"
 import { FaArrowRight, FaPhone } from "react-icons/fa"
+import { AnimatedLink } from "./Link"
 
 function Navbar({ className = "" }) {
   return (
@@ -33,13 +34,7 @@ function Navbar({ className = "" }) {
           <FaPhone />
           1-646-653-9881
         </a>
-        <a
-          href="#contact"
-          className="btn btn-sm btn-animated transition-all duration-300 hover:scale-110"
-        >
-          Contact
-          <FaArrowRight />
-        </a>
+        <AnimatedLink label="Contact" className="btn-sm" />
       </div>
     </nav>
   )
