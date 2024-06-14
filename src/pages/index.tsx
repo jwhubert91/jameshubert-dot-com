@@ -10,6 +10,7 @@ import { MdEmail } from "react-icons/md"
 
 // components
 import { IconLink } from "../components/Link"
+import Seo from "../components/Seo"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -172,4 +173,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head = () => <Seo />
