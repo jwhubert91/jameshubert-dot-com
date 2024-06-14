@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // gatsby packages
-import type { HeadFC, PageProps } from "gatsby"
+import type { PageProps } from "gatsby"
 
 // other packages
 import { FaLinkedin, FaDev, FaGithub, FaPhoneAlt } from "react-icons/fa"
@@ -33,15 +33,17 @@ const IndexPage: React.FC<PageProps> = () => {
       </nav>
       <div className="container max-w-[700px] pb-11">
         <h1 className="text-3xl font-semibold mt-10">
-          <a href="https://linkedin.com/in/jameswhubert">James Hubert</a>
+          <a href="https://www.linkedin.com/in/jameswhubert/" target="_blank">
+            James Hubert
+          </a>
         </h1>
-        <div className="flex gap-x-5 text-xs mb-1">
+        <div className="flex gap-x-4 text-xs mb-1">
           <span>📍 Remote / Brooklyn</span>
           <span>🏠 Seattle, WA</span>
         </div>
         <div className="flex text-gray-400 text-xl gap-x-1 mb-10">
           <IconLink
-            href="https://linkedin.com/in/jameswhubert"
+            href="https://www.linkedin.com/in/jameswhubert/"
             icon={<FaLinkedin />}
           />
           <IconLink
