@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `James Hubert`,
+    title: `James Hubert | Frontend web developer for custom React sites`,
     description: `US-based frontend web and mobile developer. I use React, NextJS, Gatsby, Tailwind, Flutter, and Webflow. If you have an upcoming project, please email me at hello@jameshubert.com`,
     twitterUsername: `@jameshubert_com`,
     image: `/images/headshot_plant.jpeg`,
@@ -16,7 +16,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-postcss", "gatsby-plugin-react-svg", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/assets/images/headshot_plant.jpeg"
     }
   }, "gatsby-plugin-mdx",
   {
