@@ -85,9 +85,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <a href="https://tryshopii.com" target="_blank">
               tryshopii.com
             </a>{" "}
-            a first of its kind consumer app to allow shoppers to connect with
-            local stores in their community, search their inventory, and reserve
-            for same-day pickup.
+            a consumer app to allow shoppers to connect with local stores in
+            their community, search the inventory, and reserve for pickup. It's
+            built with Flutter, NextJS, and Firebase.
           </p>
         </article>
         <article>
