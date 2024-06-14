@@ -10,47 +10,15 @@ module.exports = {
     extend: {
       fontSize: {
         xxs: "0.6em",
-        base: ["20px", "32px"],
+        base: ["16px", "24px"],
       },
-      fontFamily: {
-        sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
-        "homemade-apple": ["Homemade Apple", ...defaultTheme.fontFamily.sans],
+      colors: {
+        primary: "#5E5DF0",
       },
     },
   },
   daisyui: {
-    themes: [
-      "remix",
-      {
-        mayanRevival: {
-          primary: "#00A388", // Jade Green (Primary)
-          secondary: "#4CA9FF", // Turquoise Blue (Secondary)
-          accent: "#E27D5E", // Terracotta
-          info: "#CC772C", // Ochre Yellow
-          warning: "#DC143C", // Crimson Red
-          "base-100": "#000000", // Black (Background)
-          "base-content": "#FFFFFF", // White (Text)
-          gray: "#DDD",
-          "light-gray": "#F4F4F4",
-          charcoal: "#333333",
-        },
-      },
-      {
-        remix: {
-          primary: "#3992FF",
-          primaryAccent: "#1C6DF4",
-          secondary: "#6AD868",
-          accent: "#D83BD2",
-          info: "#FECC1A",
-          warning: "#F44250",
-          "base-100": "#121212",
-          "base-content": "#FFF",
-          gray: "#DDD",
-          "light-gray": "#F4F4F4",
-          charcoal: "#333",
-        },
-      },
-    ],
+    themes: [],
   },
   plugins: [require("daisyui")],
 }
