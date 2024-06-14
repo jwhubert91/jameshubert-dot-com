@@ -78,8 +78,20 @@ const IndexPage: React.FC<PageProps> = () => {
             hello@jameshubert.com
           </p>
         </article>
+        <article className="leading-loose mb-10">
+          <p className="mb-1 font-semibold">Current Passion:</p>
+          <p>
+            Building{" "}
+            <a href="https://tryshopii.com" target="_blank">
+              tryshopii.com
+            </a>{" "}
+            a first of its kind consumer app to allow shoppers to connect with
+            local stores in their community, search their inventory, and reserve
+            for same-day pickup.
+          </p>
+        </article>
         <article>
-          <p className="mb-1">Past Clients:</p>
+          <p className="mb-1 font-semibold">Past Clients:</p>
           <ul className="pl-4">
             <li>
               <a href="https://mainspringenergy.com" target="_blank">
