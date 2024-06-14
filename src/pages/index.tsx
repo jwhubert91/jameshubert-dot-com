@@ -15,7 +15,7 @@ import Seo from "../components/Seo"
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans pb-11">
-      <nav className="flex justify-center sm:justify-end pr-2 pt-2 max-w-[700px] mx-auto w-full pb-6">
+      <nav className="flex justify-center sm:justify-end pr-2 pt-2 mx-auto w-full pb-6">
         <a
           className="text-gray-800 flex items-center gap-x-1 text-sm mr-3 hover:no-underline"
           href="mailto:hello@jameshubert.com"
