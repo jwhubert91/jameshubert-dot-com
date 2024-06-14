@@ -3,54 +3,169 @@ import * as React from "react"
 // gatsby packages
 import type { HeadFC, PageProps } from "gatsby"
 
-// components
-import Navbar from "../components/Navbar"
-import StickyTwitterLink from "../components/StickyTwitterLink"
-import ContactForm from "../components/ContactForm"
-import Services from "../components/Services"
+// other packages
+import { FaLinkedin, FaDev, FaGithub, FaPhoneAlt } from "react-icons/fa"
+import { FaSquareXTwitter } from "react-icons/fa6"
+import { MdEmail } from "react-icons/md"
 
-// assets
-import headshotImage from "../assets/images/headshot_plant.jpeg"
-import { AnimatedLink } from "../components/Link"
+// components
+import { IconLink } from "../components/Link"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main className="flex flex-col w-full min-h-screen m-0 p-0">
-      {/* navbar */}
-      <Navbar className="flex" />
-      {/* hero */}
-      <div className="container min-h-[85vh] 2xl:min-h-[60vh] grid grid-cols-1 md:grid-cols-2 gap-11">
-        <div className="flex flex-col max-w-[450px] mx-auto sm:max-w-none justify-center">
-          <h1 className="text-3xl md:text-5xl md:font-semibold mb-8">
-            Web & Mobile Developer for React Applications
-          </h1>
-          <h4 className="text-gray-400 mb-5">
-            <span className="text-primary">On-call development</span> for{" "}
-            <span className="text-accent">web & mobile,</span> and{" "}
-            <span className="text-warning">technical support</span> from an
-            experienced, US based frontend engineer. If you have an upcoming
-            project I'd like to hear from you.
-          </h4>
-          <AnimatedLink label="Start your project" className="text-lg" />
+    <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans pb-11">
+      <nav className="flex justify-center sm:justify-end pr-2 pt-2 max-w-[700px] mx-auto w-full pb-6">
+        <a
+          className="text-gray-800 flex items-center gap-x-1 text-sm mr-3 hover:no-underline"
+          href="mailto:hello@jameshubert.com"
+        >
+          <MdEmail />
+          hello@jameshubert.com
+        </a>
+        <a
+          className="text-gray-800 flex items-center gap-x-1 text-sm hover:no-underline"
+          href="tel:1-646-653-9881"
+        >
+          <FaPhoneAlt />
+          {`(646)-653-9881`}
+        </a>
+      </nav>
+      <div className="container max-w-[700px] pb-11">
+        <h1 className="text-3xl font-semibold mt-10">
+          <a href="https://linkedin.com/in/jameswhubert">James Hubert</a>
+        </h1>
+        <div className="flex gap-x-5 text-xs mb-1">
+          <span>📍 Remote / Brooklyn</span>
+          <span>🏠 Seattle, WA</span>
         </div>
-        <div className="flex mt-5 md:mt-0 items-center justify-center order-first md:order-last">
-          <div className="w-full max-w-[250px] md:max-w-[350px] aspect-square relative">
-            <img src={headshotImage} className="absolute rounded-full" />
-          </div>
+        <div className="flex text-gray-400 text-xl gap-x-1 mb-10">
+          <IconLink
+            href="https://linkedin.com/in/jameswhubert"
+            icon={<FaLinkedin />}
+          />
+          <IconLink
+            href="https://x.com/jameshubert_com"
+            icon={<FaSquareXTwitter />}
+          />
+          <IconLink href="https://dev.to/jwhubert91" icon={<FaDev />} />
+          <IconLink href="https://github.com/jwhubert91" icon={<FaGithub />} />
         </div>
+        <article className="leading-loose mb-10">
+          <p>US-based frontend web and mobile developer.</p>
+          <p>I use React, NextJS, Gatsby, Tailwind, Flutter, and Webflow.</p>
+          <p>
+            Previously, I've worked for{" "}
+            <a
+              href="https://techcrunch.com/2021/07/21/ethos-picks-up-100m-at-a-2-7b-valuation-for-a-big-data-platform-to-improve-life-insurance-accessibility/"
+              target="_blank"
+            >
+              Ethos
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://www.forbes.com/sites/alexkonrad/2021/06/24/confluent-shares-jump-25-in-ipo-making-co-founders-new-cloud-computing-billionaires/"
+              target="_blank"
+            >
+              Confluent
+            </a>
+            .
+          </p>
+          <p>
+            If you have an upcoming project, please email me at
+            hello@jameshubert.com
+          </p>
+        </article>
+        <article>
+          <p className="mb-1">Past Clients:</p>
+          <ul className="pl-4">
+            <li>
+              <a href="https://mainspringenergy.com" target="_blank">
+                Mainspring Energy
+              </a>
+            </li>
+            <li>
+              <a href="https://rationale-design.com" target="_blank">
+                Rationale Design
+              </a>
+            </li>
+            <li>
+              <a href="https://cuberg.net" target="_blank">
+                Cuberg
+              </a>
+            </li>
+            <li>
+              <a href="https://alveotechnologies.com" target="_blank">
+                Alveo Technologies
+              </a>
+            </li>
+            <li>
+              <a href="https://www.maryannunger.com/" target="_blank">
+                Mary Ann Unger Estate
+              </a>
+            </li>
+            <li>
+              <a href="https://www.soleiltoujours.com/" target="_blank">
+                Soleil Toujours
+              </a>
+            </li>
+            <li>
+              <a href="https://www.gryphon-agency.com/" target="_blank">
+                Gryphon Agency
+              </a>
+            </li>
+            <li>
+              <a href="https://tunnel7.com" target="_blank">
+                Tunnel 7
+              </a>
+            </li>
+            <li>
+              <a href="https://montlakere.com" target="_blank">
+                Montlake Residential
+              </a>
+            </li>
+            <li>
+              <a href="https://boosballoons.com" target="_blank">
+                Boos Balloons
+              </a>
+            </li>
+            <li>
+              <a href="https://www.btv.aero/" target="_blank">
+                Burlington Airport
+              </a>
+            </li>
+            <li>
+              <a href="https://www.berkshirechoral.org/" target="_blank">
+                Berkshire Choral
+              </a>
+            </li>
+            <li>
+              <a href="https://winningwriters.com/" target="_blank">
+                Winning Writers
+              </a>
+            </li>
+            <li>
+              <a href="https://goreplace.org/" target="_blank">
+                Gore Place
+              </a>
+            </li>
+            <li>
+              <a href="https://gilburgleadership.com/" target="_blank">
+                Gilburg Leadership
+              </a>
+            </li>
+            <li>
+              <a href="https://occserv.com/" target="_blank">
+                Occupational Services Inc
+              </a>
+            </li>
+            <li>
+              <a href="https://rknewyorkwebdesign.com/" target="_blank">
+                RK Software
+              </a>
+            </li>
+          </ul>
+        </article>
       </div>
-      {/* services */}
-      <Services />
-      {/* testimonials */}
-      {/* technologies used */}
-      {/* about */}
-      {/* portfolio */}
-      {/* contact */}
-      <div className="bg-primary min-h-[400px] flex-1" id="contact">
-        <ContactForm />
-      </div>
-      {/* texture footer */}
-      <StickyTwitterLink />
     </main>
   )
 }

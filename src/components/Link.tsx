@@ -1,24 +1,19 @@
-import React from "react"
-import { FaArrowRight } from "react-icons/fa"
+import React, { ReactElement } from "react"
 
-interface LinkProps {
+interface IconLinkProps {
+  href: string
+  icon: ReactElement
   className?: string
-  label: string
-  isArrowShown?: boolean
 }
 
-export const AnimatedLink = ({
+export const IconLink = ({
+  href = "",
+  icon,
   className = "",
-  label,
-  isArrowShown = true,
-}: LinkProps) => {
+}: IconLinkProps) => {
   return (
-    <a
-      href="#contact"
-      className={`btn btn-animated hover:border hover:border-white ${className}`}
-    >
-      {label}
-      {isArrowShown && <FaArrowRight />}
+    <a href={href} target="_blank" className={`link-secondary ${className}`}>
+      {icon}
     </a>
   )
 }
