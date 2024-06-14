@@ -92,7 +92,7 @@ const IndexPage: React.FC<PageProps> = () => {
         </article>
         <article>
           <p className="mb-1 font-semibold">Past Clients:</p>
-          <ul className="pl-4">
+          <ul className="pl-5">
             <li>
               <a href="https://mainspringenergy.com" target="_blank">
                 Mainspring Energy
