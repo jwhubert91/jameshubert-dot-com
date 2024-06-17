@@ -11,6 +11,10 @@ import { MdEmail } from "react-icons/md"
 // components
 import { IconLink } from "../components/Link"
 import Seo from "../components/Seo"
+import ClientLink from "../components/ClientLink"
+
+// content
+import { pastClients } from "../content/pastClients"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -93,91 +97,13 @@ const IndexPage: React.FC<PageProps> = () => {
         <article>
           <p className="mb-1 font-semibold">Past Clients:</p>
           <ul className="pl-5">
-            <li>
-              <a href="https://mainspringenergy.com" target="_blank">
-                Mainspring Energy
-              </a>
-            </li>
-            <li>
-              <a href="https://rationale-design.com" target="_blank">
-                Rationale Design
-              </a>
-            </li>
-            <li>
-              <a href="https://cuberg.net" target="_blank">
-                Cuberg
-              </a>
-            </li>
-            <li>
-              <a href="https://alveotechnologies.com" target="_blank">
-                Alveo Technologies
-              </a>
-            </li>
-            <li>
-              <a href="https://www.maryannunger.com/" target="_blank">
-                Mary Ann Unger Estate
-              </a>
-            </li>
-            <li>
-              <a href="https://www.soleiltoujours.com/" target="_blank">
-                Soleil Toujours
-              </a>
-            </li>
-            <li>
-              <a href="https://www.gryphon-agency.com/" target="_blank">
-                Gryphon Agency
-              </a>
-            </li>
-            <li>
-              <a href="https://tunnel7.com" target="_blank">
-                Tunnel 7
-              </a>
-            </li>
-            <li>
-              <a href="https://montlakere.com" target="_blank">
-                Montlake Residential
-              </a>
-            </li>
-            <li>
-              <a href="https://boosballoons.com" target="_blank">
-                Boos Balloons
-              </a>
-            </li>
-            <li>
-              <a href="https://www.btv.aero/" target="_blank">
-                Burlington Airport
-              </a>
-            </li>
-            <li>
-              <a href="https://www.berkshirechoral.org/" target="_blank">
-                Berkshire Choral
-              </a>
-            </li>
-            <li>
-              <a href="https://winningwriters.com/" target="_blank">
-                Winning Writers
-              </a>
-            </li>
-            <li>
-              <a href="https://goreplace.org/" target="_blank">
-                Gore Place
-              </a>
-            </li>
-            <li>
-              <a href="https://gilburgleadership.com/" target="_blank">
-                Gilburg Leadership
-              </a>
-            </li>
-            <li>
-              <a href="https://occserv.com/" target="_blank">
-                Occupational Services Inc
-              </a>
-            </li>
-            <li>
-              <a href="https://rknewyorkwebdesign.com/" target="_blank">
-                RK Software
-              </a>
-            </li>
+            {pastClients.map((client, idx) => (
+              <ClientLink
+                hrefUrl={client.hrefUrl}
+                label={client.label}
+                key={idx}
+              />
+            ))}
           </ul>
         </article>
       </div>
