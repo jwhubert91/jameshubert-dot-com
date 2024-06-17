@@ -107,7 +107,7 @@ const IndexPage: React.FC<PageProps> = () => {
             ))}
           </ul>
         </article>
-        <article className="my-5 py-5 flex flex-col gap-y-5">
+        <article className="my-5 py-5 flex flex-col gap-y-4">
           <h2 className="mb-1 font-semibold">Testimonials:</h2>
           {testimonials.map((testimonial, idx) => (
             <div className="card w-full glass shadow-xl">
