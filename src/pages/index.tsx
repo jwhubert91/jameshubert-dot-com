@@ -16,10 +16,13 @@ import ClientLink from "../components/ClientLink"
 // content
 import { pastClients } from "../content/pastClients"
 import { testimonials } from "../content/testimonials"
+import TestimonialCard from "../components/TestimonialCard"
 
 const IndexPage: React.FC<PageProps> = () => {
+  const currentYear = new Date().getFullYear()
+
   return (
-    <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans pb-11">
+    <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans">
       <nav className="flex justify-center sm:justify-end pr-2 pt-2 mx-auto w-full pb-6">
         <a
           className="text-gray-800 flex items-center gap-x-1 text-sm mr-3 hover:no-underline"
@@ -83,6 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
             hello@jameshubert.com
           </p>
         </article>
+        {/* CURRENT PROJECT(S) */}
         <article className="leading-loose mb-10">
           <h2 className="mb-1 font-semibold">Current Passion:</h2>
           <p>
@@ -90,11 +94,11 @@ const IndexPage: React.FC<PageProps> = () => {
             <a href="https://tryshopii.com" target="_blank">
               tryshopii.com
             </a>
-            , an app for consumers to shop from local stores in their community
-            and reserve for pickup. It's built with Flutter, NextJS, and
-            Firebase.
+            , an app for consumers to shop from local stores and reserve items
+            for pickup. It's built with Flutter, NextJS, and Firebase.
           </p>
         </article>
+        {/* PAST CLIENTS */}
         <article className="mb-10">
           <h2 className="mb-1 font-semibold">Past Clients:</h2>
           <ul className="pl-5">
@@ -107,22 +111,17 @@ const IndexPage: React.FC<PageProps> = () => {
             ))}
           </ul>
         </article>
+        {/* TESTIMONIALS */}
         <article className="my-5 py-5 flex flex-col gap-y-4">
           <h2 className="mb-1 font-semibold">Testimonials:</h2>
           {testimonials.map((testimonial, idx) => (
-            <div className="card w-full glass shadow-xl">
-              <div className="card-body" key={idx}>
-                <h3 className="mb-5">{testimonial.quote}</h3>
-                <div className="w-full flex flex-col items-end">
-                  <p>{testimonial.author}</p>
-                  <p>{testimonial.authorTitle}</p>
-                  <p>{testimonial.authorCompany}</p>
-                </div>
-              </div>
-            </div>
+            <TestimonialCard {...testimonial} key={idx} />
           ))}
         </article>
       </div>
+      <footer className="mx-auto w-full max-w-[700px] text-center">
+        <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
+      </footer>
     </main>
   )
 }
