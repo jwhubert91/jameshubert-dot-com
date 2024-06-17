@@ -70,12 +70,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </p>
           <p>
             If you have an upcoming project, please email me at{" "}
-            <a
-              href="mailto:hello@jameshubert.com"
-              className="text-black underline"
-            >
-              hello@jameshubert.com
-            </a>
+            <span className="text-black underline">hello@jameshubert.com</span>
           </p>
         </article>
         {/* CURRENT PROJECT(S) */}
@@ -111,7 +106,7 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </article>
       </div>
-      <footer className="mx-auto w-full max-w-[700px] text-center">
+      <footer className="mx-auto w-full max-w-[700px] text-center text-sm">
         <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
       </footer>
     </main>
