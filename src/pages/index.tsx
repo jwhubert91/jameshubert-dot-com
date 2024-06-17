@@ -15,6 +15,7 @@ import ClientLink from "../components/ClientLink"
 
 // content
 import { pastClients } from "../content/pastClients"
+import { testimonials } from "../content/testimonials"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -83,7 +84,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </p>
         </article>
         <article className="leading-loose mb-10">
-          <p className="mb-1 font-semibold">Current Passion:</p>
+          <h2 className="mb-1 font-semibold">Current Passion:</h2>
           <p>
             Building{" "}
             <a href="https://tryshopii.com" target="_blank">
@@ -94,8 +95,8 @@ const IndexPage: React.FC<PageProps> = () => {
             Firebase.
           </p>
         </article>
-        <article>
-          <p className="mb-1 font-semibold">Past Clients:</p>
+        <article className="mb-10">
+          <h2 className="mb-1 font-semibold">Past Clients:</h2>
           <ul className="pl-5">
             {pastClients.map((client, idx) => (
               <ClientLink
@@ -105,6 +106,21 @@ const IndexPage: React.FC<PageProps> = () => {
               />
             ))}
           </ul>
+        </article>
+        <article className="my-5 py-5 flex flex-col gap-y-5">
+          <h2 className="mb-1 font-semibold">Testimonials:</h2>
+          {testimonials.map((testimonial, idx) => (
+            <div className="card w-full glass shadow-xl">
+              <div className="card-body" key={idx}>
+                <h3 className="mb-5">{testimonial.quote}</h3>
+                <div className="w-full flex flex-col items-end">
+                  <p>{testimonial.author}</p>
+                  <p>{testimonial.authorTitle}</p>
+                  <p>{testimonial.authorCompany}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </article>
       </div>
     </main>

@@ -37,12 +37,12 @@ export const pastClients: PastClientProps[] = [
     hrefUrl: "https://tunnel7.com",
   },
   {
-    label: "https://montlakere.com",
-    hrefUrl: "Montlake Residential",
+    label: "Montlake Residential",
+    hrefUrl: "https://montlakere.com",
   },
   {
-    label: "https://boosballoons.com",
-    hrefUrl: "Boos Balloons",
+    label: "Boos Balloons",
+    hrefUrl: "https://boosballoons.com",
   },
   {
     label: "Burlington Airport",
