@@ -4,9 +4,8 @@ import * as React from "react"
 import type { PageProps } from "gatsby"
 
 // other packages
-import { FaLinkedin, FaDev, FaGithub, FaPhoneAlt } from "react-icons/fa"
+import { FaLinkedin, FaDev, FaGithub } from "react-icons/fa"
 import { FaSquareXTwitter } from "react-icons/fa6"
-import { MdEmail } from "react-icons/md"
 
 // components
 import { IconLink } from "../components/Link"
@@ -17,29 +16,17 @@ import ClientLink from "../components/ClientLink"
 import { pastClients } from "../content/pastClients"
 import { testimonials } from "../content/testimonials"
 import TestimonialCard from "../components/TestimonialCard"
+import Navbar from "../components/Navbar"
 
 const IndexPage: React.FC<PageProps> = () => {
   const currentYear = new Date().getFullYear()
 
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans">
-      <nav className="flex justify-center sm:justify-end pr-2 pt-2 mx-auto w-full pb-6">
-        <a
-          className="text-gray-800 flex items-center gap-x-1 text-sm mr-3 hover:no-underline"
-          href="mailto:hello@jameshubert.com"
-        >
-          <MdEmail />
-          hello@jameshubert.com
-        </a>
-        <a
-          className="text-gray-800 flex items-center gap-x-1 text-sm hover:no-underline"
-          href="tel:1-646-653-9881"
-        >
-          <FaPhoneAlt />
-          {`(646)-653-9881`}
-        </a>
-      </nav>
-      <div className="container max-w-[700px] pb-11">
+      {/* NAVBAR */}
+      <Navbar />
+      {/* HERO */}
+      <div className="container max-w-[700px] py-11">
         <h1 className="text-3xl font-semibold mt-10">
           <a href="https://www.linkedin.com/in/jameswhubert/" target="_blank">
             James Hubert
@@ -82,8 +69,13 @@ const IndexPage: React.FC<PageProps> = () => {
             .
           </p>
           <p>
-            If you have an upcoming project, please email me at
-            hello@jameshubert.com
+            If you have an upcoming project, please email me at{" "}
+            <a
+              href="mailto:hello@jameshubert.com"
+              className="text-black underline"
+            >
+              hello@jameshubert.com
+            </a>
           </p>
         </article>
         {/* CURRENT PROJECT(S) */}
