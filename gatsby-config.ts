@@ -20,16 +20,6 @@ const config: GatsbyConfig = {
     }
   }, "gatsby-plugin-mdx",
   {
-    resolve: `gatsby-plugin-google-fonts`,
-    options: {
-      fonts: [
-        `Inter`,
-        'Homemade Apple',
-      ],
-      display: 'swap'
-    }
-  },
-  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
@@ -45,7 +35,17 @@ const config: GatsbyConfig = {
     __key: 'images',
   },"gatsby-plugin-image",
   "gatsby-plugin-sharp",
-  "gatsby-transformer-sharp"]
+  "gatsby-transformer-sharp",
+  {
+    resolve: "gatsby-plugin-google-tagmanager",
+    options: {
+      id: "GTM-WWFCSHFN",
+      includeInDevelopment: false,
+      defaultDataLayer: { platform: "gatsby" },
+      enableWebVitalsTracking: true,
+    },
+  },
+]
 };
 
 export default config;
