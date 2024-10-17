@@ -1,7 +1,7 @@
 import * as React from "react"
 
 // gatsby packages
-import type { PageProps } from "gatsby"
+import { type PageProps } from "gatsby"
 
 // other packages
 import { FaLinkedin, FaDev, FaGithub } from "react-icons/fa"
@@ -35,13 +35,17 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="absolute z-9 w-full h-full flex items-center">
           <div className="mx-3 lg:max-w-[1500px] lg:mx-auto">
             <h1 className="text-5xl lg:text-6xl font-bold text-white">Seattle Retail Web Solutions</h1>
-            <h2 className="text-gray-300 text-2xl">IT consulting for restaurants, retail, non-profit, and small business</h2>
+            <h2 className="text-gray-200 text-2xl mb-5">IT consulting for restaurants, retail, non-profit, and small business</h2>
+            <div>
+              <a href="#services" className="px-8 py-3 bg-white text-black text-xl rounded-full border border-white hover:text-white hover:bg-black no-underline hover:no-underline">Explore &darr;</a>
+            </div>
           </div>
         </div>
       </div>
       {/* BODY */}
-      {/* ABOUT SECTION */}
       <div className="container max-w-[700px] py-11">
+        {/* SERVICES */}
+        <div id="services"></div>
         {/* PAST CLIENTS */}
         <article className="mb-10">
           <h2 className="mb-1 font-semibold">Past Clients:</h2>
@@ -55,48 +59,51 @@ const IndexPage: React.FC<PageProps> = () => {
             ))}
           </ul>
         </article>
-        <h2 className="text-3xl font-semibold mt-10">
-          James Hubert
-        </h2>
-        <div className="flex gap-x-4 text-xs mb-1">
-          <span>Web Developer in Seattle, WA</span>
-        </div>
-        <div className="flex text-gray-400 text-xl gap-x-1 mb-10">
-          <IconLink
-            href="https://www.linkedin.com/in/jameswhubert/"
-            icon={<FaLinkedin />}
-          />
-          <IconLink
-            href="https://x.com/jameshubert_com"
-            icon={<FaSquareXTwitter />}
-          />
-          <IconLink href="https://dev.to/jwhubert91" icon={<FaDev />} />
-          <IconLink href="https://github.com/jwhubert91" icon={<FaGithub />} />
-        </div>
-        <article className="leading-loose mb-10">
-          <p>US-based frontend web and mobile developer.</p>
-          <p>I use React, NextJS, Gatsby, Tailwind, Flutter, and Webflow.</p>
-          <p>
-            Previously, I've worked for{" "}
-            <a
-              href="https://techcrunch.com/2021/07/21/ethos-picks-up-100m-at-a-2-7b-valuation-for-a-big-data-platform-to-improve-life-insurance-accessibility/"
-              target="_blank"
-            >
-              Ethos
-            </a>{" "}
-            and{" "}
-            <a
-              href="https://www.forbes.com/sites/alexkonrad/2021/06/24/confluent-shares-jump-25-in-ipo-making-co-founders-new-cloud-computing-billionaires/"
-              target="_blank"
-            >
-              Confluent
-            </a>
-            .
-          </p>
-          <p>
-            If you have an upcoming project, please email me at
-            hello@jameshubert.com
-          </p>
+        {/* ABOUT SECTION */}
+        <article>
+          <h2 className="text-3xl font-semibold mt-10">
+            James Hubert
+          </h2>
+          <div className="flex gap-x-4 text-xs mb-1">
+            <span>Web Developer in Seattle, WA</span>
+          </div>
+          <div className="flex text-gray-400 text-xl gap-x-1 mb-10">
+            <IconLink
+              href="https://www.linkedin.com/in/jameswhubert/"
+              icon={<FaLinkedin />}
+            />
+            <IconLink
+              href="https://x.com/jameshubert_com"
+              icon={<FaSquareXTwitter />}
+            />
+            <IconLink href="https://dev.to/jwhubert91" icon={<FaDev />} />
+            <IconLink href="https://github.com/jwhubert91" icon={<FaGithub />} />
+          </div>
+          <div className="leading-loose mb-10">
+            <p>US-based frontend web and mobile developer.</p>
+            <p>I use React, NextJS, Gatsby, Tailwind, Flutter, and Webflow.</p>
+            <p>
+              Previously, I've worked for{" "}
+              <a
+                href="https://techcrunch.com/2021/07/21/ethos-picks-up-100m-at-a-2-7b-valuation-for-a-big-data-platform-to-improve-life-insurance-accessibility/"
+                target="_blank"
+              >
+                Ethos
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://www.forbes.com/sites/alexkonrad/2021/06/24/confluent-shares-jump-25-in-ipo-making-co-founders-new-cloud-computing-billionaires/"
+                target="_blank"
+              >
+                Confluent
+              </a>
+              .
+            </p>
+            <p>
+              If you have an upcoming project, please email me at
+              hello@jameshubert.com
+            </p>
+          </div>
         </article>
         {/* TESTIMONIALS */}
         <article className="my-5 py-5 flex flex-col gap-y-4">
