@@ -39,7 +39,22 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </div>
+      {/* BODY */}
+      {/* ABOUT SECTION */}
       <div className="container max-w-[700px] py-11">
+        {/* PAST CLIENTS */}
+        <article className="mb-10">
+          <h2 className="mb-1 font-semibold">Past Clients:</h2>
+          <ul className="pl-5">
+            {pastClients.map((client, idx) => (
+              <ClientLink
+                hrefUrl={client.hrefUrl}
+                label={client.label}
+                key={idx}
+              />
+            ))}
+          </ul>
+        </article>
         <h2 className="text-3xl font-semibold mt-10">
           James Hubert
         </h2>
@@ -83,19 +98,6 @@ const IndexPage: React.FC<PageProps> = () => {
             hello@jameshubert.com
           </p>
         </article>
-        {/* PAST CLIENTS */}
-        <article className="mb-10">
-          <h2 className="mb-1 font-semibold">Past Clients:</h2>
-          <ul className="pl-5">
-            {pastClients.map((client, idx) => (
-              <ClientLink
-                hrefUrl={client.hrefUrl}
-                label={client.label}
-                key={idx}
-              />
-            ))}
-          </ul>
-        </article>
         {/* TESTIMONIALS */}
         <article className="my-5 py-5 flex flex-col gap-y-4">
           <h2 className="mb-1 font-semibold">Testimonials:</h2>
@@ -104,8 +106,17 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </article>
       </div>
-      {/* CURRENT PROJECT(S) */}
-      {/* <article className="leading-loose mb-10">
+      <footer className="mx-auto w-full max-w-[700px] text-center text-sm mb-6">
+        <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
+      </footer>
+    </main>
+  )
+}
+
+export default IndexPage
+
+{/* CURRENT PROJECT(S) */ }
+{/* <article className="leading-loose mb-10">
           <h2 className="mb-1 font-semibold">Current Passion:</h2>
           <p>
             Building{" "}
@@ -116,13 +127,5 @@ const IndexPage: React.FC<PageProps> = () => {
             for pickup. It's built with Flutter, NextJS, and Firebase.
           </p>
         </article> */}
-      <footer className="mx-auto w-full max-w-[700px] text-center text-sm mb-6">
-        <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
-      </footer>
-    </main>
-  )
-}
-
-export default IndexPage
 
 export const Head = () => <Seo />
