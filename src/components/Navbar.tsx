@@ -2,9 +2,9 @@ import React from "react"
 import { MdEmail } from "react-icons/md"
 import { FaPhoneAlt } from "react-icons/fa"
 
-const Navbar = () => {
+const Navbar = ({ className = "" }) => {
   return (
-    <nav className="flex justify-center sm:justify-end pr-2 w-full">
+    <nav className={`flex justify-center sm:justify-end pr-2 w-full ${className}`}>
       <div className="p-2 md:mt-1 flex gap-x-2">
         <a
           className="text-gray-800 flex items-center gap-x-1 text-sm mr-3 hover:no-underline"

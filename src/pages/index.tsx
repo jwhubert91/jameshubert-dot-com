@@ -18,23 +18,33 @@ import { testimonials } from "../content/testimonials"
 import TestimonialCard from "../components/TestimonialCard"
 import Navbar from "../components/Navbar"
 
+// assets
+import seattleImage from "../assets/images/zhifei-zhou-QEob0Fp4rdg-unsplash.jpg"
+
 const IndexPage: React.FC<PageProps> = () => {
   const currentYear = new Date().getFullYear()
 
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans">
       {/* NAVBAR */}
-      <Navbar />
+      <Navbar className="fixed z-10 bg-white" />
       {/* HERO */}
+      <div className="w-screen h-screen max-h-[600px] bg-black relative top-[42px]">
+        <img src={seattleImage} className="w-full h-full absolute object-cover top-0 z-5" />
+        <div className="w-full h-full z-8 bg-black absolute opacity-50" />
+        <div className="absolute z-9 w-full h-full flex items-center">
+          <div className="mx-3 lg:container">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white">Seattle Retail Web Solutions</h1>
+            <h2 className="text-gray-300 text-2xl">IT consulting for restaurants, retail, non-profit, and small businesses</h2>
+          </div>
+        </div>
+      </div>
       <div className="container max-w-[700px] py-11">
-        <h1 className="text-3xl font-semibold mt-10">
-          <a href="https://www.linkedin.com/in/jameswhubert/" target="_blank">
-            James Hubert
-          </a>
-        </h1>
+        <h2 className="text-3xl font-semibold mt-10">
+          James Hubert
+        </h2>
         <div className="flex gap-x-4 text-xs mb-1">
-          <span>📍 Remote / Brooklyn</span>
-          <span>🏠 Seattle, WA</span>
+          <span>Web Developer in Seattle, WA</span>
         </div>
         <div className="flex text-gray-400 text-xl gap-x-1 mb-10">
           <IconLink
@@ -74,7 +84,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </p>
         </article>
         {/* CURRENT PROJECT(S) */}
-        <article className="leading-loose mb-10">
+        {/* <article className="leading-loose mb-10">
           <h2 className="mb-1 font-semibold">Current Passion:</h2>
           <p>
             Building{" "}
@@ -84,7 +94,7 @@ const IndexPage: React.FC<PageProps> = () => {
             , an app for consumers to shop from local stores and reserve items
             for pickup. It's built with Flutter, NextJS, and Firebase.
           </p>
-        </article>
+        </article> */}
         {/* PAST CLIENTS */}
         <article className="mb-10">
           <h2 className="mb-1 font-semibold">Past Clients:</h2>
