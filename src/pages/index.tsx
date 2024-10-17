@@ -29,13 +29,13 @@ const IndexPage: React.FC<PageProps> = () => {
       {/* NAVBAR */}
       <Navbar className="fixed z-10 bg-white" />
       {/* HERO */}
-      <div className="w-screen h-screen max-h-[600px] bg-black relative top-[42px]">
+      <div className="w-screen h-screen max-h-[600px] bg-black relative top-[32px]">
         <img src={seattleImage} className="w-full h-full absolute object-cover top-0 z-5" />
         <div className="w-full h-full z-8 bg-black absolute opacity-50" />
         <div className="absolute z-9 w-full h-full flex items-center">
-          <div className="mx-3 lg:container">
+          <div className="mx-3 lg:max-w-[1500px] lg:mx-auto">
             <h1 className="text-5xl lg:text-6xl font-bold text-white">Seattle Retail Web Solutions</h1>
-            <h2 className="text-gray-300 text-2xl">IT consulting for restaurants, retail, non-profit, and small businesses</h2>
+            <h2 className="text-gray-300 text-2xl">IT consulting for restaurants, retail, non-profit, and small business</h2>
           </div>
         </div>
       </div>
@@ -83,18 +83,6 @@ const IndexPage: React.FC<PageProps> = () => {
             hello@jameshubert.com
           </p>
         </article>
-        {/* CURRENT PROJECT(S) */}
-        {/* <article className="leading-loose mb-10">
-          <h2 className="mb-1 font-semibold">Current Passion:</h2>
-          <p>
-            Building{" "}
-            <a href="https://tryshopii.com" target="_blank">
-              tryshopii.com
-            </a>
-            , an app for consumers to shop from local stores and reserve items
-            for pickup. It's built with Flutter, NextJS, and Firebase.
-          </p>
-        </article> */}
         {/* PAST CLIENTS */}
         <article className="mb-10">
           <h2 className="mb-1 font-semibold">Past Clients:</h2>
@@ -116,6 +104,18 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </article>
       </div>
+      {/* CURRENT PROJECT(S) */}
+      {/* <article className="leading-loose mb-10">
+          <h2 className="mb-1 font-semibold">Current Passion:</h2>
+          <p>
+            Building{" "}
+            <a href="https://tryshopii.com" target="_blank">
+              tryshopii.com
+            </a>
+            , an app for consumers to shop from local stores and reserve items
+            for pickup. It's built with Flutter, NextJS, and Firebase.
+          </p>
+        </article> */}
       <footer className="mx-auto w-full max-w-[700px] text-center text-sm mb-6">
         <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
       </footer>
