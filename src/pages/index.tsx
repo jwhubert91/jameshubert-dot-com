@@ -49,10 +49,13 @@ const IndexPage: React.FC<PageProps> = () => {
       <div className="container max-w-[900px] py-11">
         {/* SERVICES */}
         <article id="services mb-10">
-          <h2 className="text-2xl font-bold">Engaging Your Customer Base</h2>
+          <h2 className="text-2xl font-bold">Services</h2>
           <p className="max-w-prose">I've worked with businesses of all sizes to grow web traffic, increase orders, and troubleshoot IT issues. My goal is to get everything working for you while removing the headache.</p>
-          <div>
-            Services go here...
+          <div className="p-4 grid grid-cols-3 grid-rows-2 gap-2">
+            <div>
+              <h3>Benefit name</h3>
+              <p>Short description</p>
+            </div>
           </div>
         </article>
         {/* PAST CLIENTS */}
