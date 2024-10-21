@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `James Hubert | Frontend web developer for custom React sites`,
-    description: `US-based frontend web and mobile developer. I use React, NextJS, Gatsby, Tailwind, Flutter, and Webflow. If you have an upcoming project, please email me at hello@jameshubert.com`,
+    title: `James Hubert | IT Help for Restaurants & Retail in Seattle`,
+    description: `IT help and web development for restaurants, retail, non-profit, and small business. We help with online ordering, POS systems, websites, delivery apps, and more.`,
     twitterUsername: `@jameshubert_com`,
     image: `/images/headshot_plant.jpeg`,
     siteUrl: `https://jameshubert.com`,
@@ -14,38 +14,38 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: ["gatsby-plugin-sitemap",
     "gatsby-plugin-postcss", "gatsby-plugin-react-svg", {
-    resolve: 'gatsby-plugin-manifest',
-    options: {
-      "icon": "src/assets/images/headshot_plant.jpeg"
-    }
-  }, "gatsby-plugin-mdx",
-  {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/assets/images/headshot_plant.jpeg"
+      }
+    }, "gatsby-plugin-mdx",
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/"
+      },
+      __key: "pages"
+    }, {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: './src/assets/images/',
+      },
+      __key: 'images',
+    }, "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WWFCSHFN",
+        includeInDevelopment: false,
+        defaultDataLayer: { platform: "gatsby" },
+        enableWebVitalsTracking: true,
+      },
     },
-    __key: "pages"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      name: 'images',
-      path: './src/assets/images/',
-    },
-    __key: 'images',
-  },"gatsby-plugin-image",
-  "gatsby-plugin-sharp",
-  "gatsby-transformer-sharp",
-  {
-    resolve: "gatsby-plugin-google-tagmanager",
-    options: {
-      id: "GTM-WWFCSHFN",
-      includeInDevelopment: false,
-      defaultDataLayer: { platform: "gatsby" },
-      enableWebVitalsTracking: true,
-    },
-  },
-]
+  ]
 };
 
 export default config;

@@ -27,28 +27,37 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <main className="flex flex-col w-full min-h-screen m-0 p-0 font-sans">
       {/* NAVBAR */}
-      <Navbar className="fixed z-10 bg-white" />
+      <Navbar className="fixed z-10 bg-white shadow-md" />
       {/* HERO */}
       <div className="w-screen h-screen max-h-[600px] bg-black relative top-[32px]">
         <img src={seattleImage} className="w-full h-full absolute object-cover top-0 z-5" />
         <div className="w-full h-full z-8 bg-black absolute opacity-50" />
         <div className="absolute z-9 w-full h-full flex items-center">
-          <div className="mx-3 lg:max-w-[1500px] lg:mx-auto">
-            <h1 className="text-5xl lg:text-6xl font-bold text-white">Seattle Retail Web Solutions</h1>
-            <h2 className="text-gray-200 text-2xl mb-5">IT consulting for restaurants, retail, non-profit, and small business</h2>
-            <div>
-              <a href="#services" className="px-8 py-3 bg-white text-black text-xl rounded-full border border-white hover:text-white hover:bg-black no-underline hover:no-underline">Explore &darr;</a>
+          <div className="container max-w-[900px]">
+            <div className="w-full max-w-[900px]">
+              <h1 className="text-5xl lg:text-6xl font-bold text-white">Seattle Retail Web Co.</h1>
+              <h2 className="text-gray-200 text-2xl mb-5 max-w-[700px]">IT consulting and web development for restaurants, retail, non-profit, and small business</h2>
+              <div>
+                <a href="#services" className="px-8 py-3 bg-white text-black text-xl rounded-full border border-white hover:text-white hover:bg-black no-underline hover:no-underline">Explore &darr;</a>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
       {/* BODY */}
-      <div className="container max-w-[700px] py-11">
+      <div className="container max-w-[900px] py-11">
         {/* SERVICES */}
-        <div id="services"></div>
+        <article id="services mb-10">
+          <h2 className="text-2xl font-bold">Engaging Your Customer Base</h2>
+          <p className="max-w-prose">I've worked with businesses of all sizes to grow web traffic, increase orders, and troubleshoot IT issues. My goal is to get everything working for you while removing the headache.</p>
+          <div>
+            Services go here...
+          </div>
+        </article>
         {/* PAST CLIENTS */}
         <article className="mb-10">
-          <h2 className="mb-1 font-semibold">Past Clients:</h2>
+          <h2 className="mb-3 font-bold">Past Clients:</h2>
           <ul className="pl-5">
             {pastClients.map((client, idx) => (
               <ClientLink
@@ -112,6 +121,9 @@ const IndexPage: React.FC<PageProps> = () => {
             <TestimonialCard {...testimonial} key={idx} />
           ))}
         </article>
+        <article id="benefits"><h2>Benefits</h2></article>
+        <article id="process"><h2>Process</h2></article>
+        <article id="guarantee"><h2>Guarantee</h2></article>
       </div>
       <footer className="mx-auto w-full max-w-[700px] text-center text-sm mb-6">
         <span className="text-gray-400">&copy; James Hubert {currentYear}</span>
